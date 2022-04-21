@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "375405146326",
+    "project_id": "senior-communication-app-ce769",
+    "storage_bucket": "senior-communication-app-ce769.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375405146326:android:305179170fa43947315977",
+        "android_client_info": {
+          "package_name": "com.example.senior_communication_aaron"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375405146326-uktudo0shgmk2ukm8sth64givscirhch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUjNYyFqknLrTR9bX0lUiqScxl-pPA7Bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375405146326-uktudo0shgmk2ukm8sth64givscirhch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
