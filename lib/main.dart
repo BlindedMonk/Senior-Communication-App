@@ -1,61 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:senior_communication_aaron/login_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-main(){
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: LoginPage(),
-  ));
 
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MyApp());
 }
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-
+// This widget is the root of your application.
   @override
-  WidgetBuild(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.deepOrangeAccent,
-      body:Stack(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 40, left: 10),
-              child: Text("Welcome \nBack",style: TextStyle(color: Colors.white,fontSize: 50,fontWeight: FontWeight.bold))
-          )
-
-,          Container(
-            padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-            margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.45),
-            width: double.infinity,
-            height: 450,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(topRight: Radius.circular(50), topLeft: Radius.circular(50))
-            ),
-            child:Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("Sign In", style: TextStyle(fontSize: 45, fontWeight: FontWeight.w400),),
-                SizedBox(height: 15,),
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "E-mail",
-
-                  ),
-                ),
-                SizedBox(height: 15,),
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "Password",
-suffixIcon:IconButton(onPressed:(){},icon: Icon(Icons.visibility),)
-                  ),
-                )
-
-              ]
-            )
-          )
-        ],
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+        ),
+        primarySwatch: Colors.blue,
       ),
+      home: LoginPage(),
     );
   }
+
 }
+
+
+
+
