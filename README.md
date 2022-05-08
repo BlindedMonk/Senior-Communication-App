@@ -1,6 +1,6 @@
 # senior_communication_aaron
 
-A new Flutter project.
+App geared toward seniors to communicate better with their families. 
 
 ## Getting Started
 
